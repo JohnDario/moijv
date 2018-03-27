@@ -1,7 +1,13 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>Hello MoiJV !!!!</h1>
-    {# <p><?php echo $msg; ?> #}
-    <p>{{ msg }}</p>
+    <h1>MoiJV</h1>
+    <h2>Liste des utilisateurs</h2>
+    <ul>
+        {# <?php foreach (users as $user): ?> #}
+        {% for user in users %}
+            <li>{{ user.username }} {{ user.email }}</li>
+        (# <?php endforeach; ?> #)    
+        {% endfor %}
+    </ul>
 {% endblock %}
